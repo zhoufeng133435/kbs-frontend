@@ -1,5 +1,8 @@
 import type { Metadata } from 'next'
-import './globals.css'
+import '@/styles/globals.css'
+import Header from '@/components/layout/Header'
+import Sidebar from '@/components/layout/Sidebar'
+import Footer from '@/components/layout/Footer'
 
 export const metadata: Metadata = {
 	title: 'Knowledge Base System',
@@ -13,7 +16,18 @@ export default function RootLayout({
 }) {
 	return (
 		<html lang="zh-CN">
-			<body>{children}</body>
+			<body>
+				<div className="flex flex-col min-h-screen">
+					<Header />
+					<div className="flex flex-1">
+						<Sidebar />
+						<main className="flex-1 p-6 bg-gray-50">
+							{children}
+						</main>
+					</div>
+					<Footer />
+				</div>
+			</body>
 		</html>
 	)
 }
