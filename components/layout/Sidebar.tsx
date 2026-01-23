@@ -9,13 +9,13 @@ export default function Sidebar() {
 	const [isFileManagementOpen, setIsFileManagementOpen] = useState(true)
 
 	const navItems = [
-		{ href: '/', label: '首页', icon: '🏠' },
-		{ href: '/search', label: '搜索', icon: '🔍' },
+		{ href: '/pages/index', label: '首页', icon: '🏠' },
+		{ href: '/pages/search', label: '搜索', icon: '🔍' },
 	]
 
 	const fileManagementItems = [
-		{ href: '/upload', label: '文件上传', icon: '📤' },
-		{ href: '/document', label: '文档管理', icon: '📁' },
+		{ href: '/pages/upload', label: '文件上传', icon: '📤' },
+		{ href: '/pages/document', label: '文档管理', icon: '📁' },
 	]
 
 	return (
@@ -30,8 +30,8 @@ export default function Sidebar() {
 								key={item.href}
 								href={item.href}
 								className={`flex items-center gap-2 px-4 py-2 rounded-lg text-xs font-semibold uppercase tracking-wider transition-colors ${isActive
-										? 'bg-blue-50 text-blue-600'
-										: 'text-gray-500 hover:text-gray-700 hover:bg-gray-100'
+									? 'bg-blue-50 text-blue-600'
+									: 'text-gray-500 hover:text-gray-700 hover:bg-gray-100'
 									}`}
 							>
 								<span className="text-sm">{item.icon}</span>
@@ -62,8 +62,8 @@ export default function Sidebar() {
 										key={item.href}
 										href={item.href}
 										className={`flex items-center gap-2 px-4 py-2 rounded-lg text-xs font-semibold uppercase tracking-wider transition-colors ${isActive
-												? 'bg-blue-50 text-blue-600'
-												: 'text-gray-500 hover:text-gray-700 hover:bg-gray-100'
+											? 'bg-blue-50 text-blue-600'
+											: 'text-gray-500 hover:text-gray-700 hover:bg-gray-100'
 											}`}
 									>
 										<span className="text-sm">{item.icon}</span>
