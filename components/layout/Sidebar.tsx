@@ -29,11 +29,10 @@ export default function Sidebar() {
 							<Link
 								key={item.href}
 								href={item.href}
-								className={`flex items-center gap-2 px-4 py-2 rounded-lg text-xs font-semibold uppercase tracking-wider transition-colors ${
-									isActive
+								className={`flex items-center gap-2 px-4 py-2 rounded-lg text-xs font-semibold uppercase tracking-wider transition-colors ${isActive
 										? 'bg-blue-50 text-blue-600'
 										: 'text-gray-500 hover:text-gray-700 hover:bg-gray-100'
-								}`}
+									}`}
 							>
 								<span className="text-sm">{item.icon}</span>
 								<span>{item.label}</span>
@@ -49,9 +48,8 @@ export default function Sidebar() {
 						className="w-full flex items-center justify-between px-4 py-2 text-xs font-semibold text-gray-500 uppercase tracking-wider hover:text-gray-700 transition-colors"
 					>
 						<span>文件管理</span>
-						<span className={`text-[10px] transform transition-transform duration-200 ${
-							isFileManagementOpen ? 'rotate-180' : ''
-						}`}>
+						<span className={`text-[10px] transform transition-transform duration-200 ${isFileManagementOpen ? 'rotate-180' : ''
+							}`}>
 							▼
 						</span>
 					</button>
@@ -63,11 +61,10 @@ export default function Sidebar() {
 									<Link
 										key={item.href}
 										href={item.href}
-										className={`flex items-center gap-2 px-4 py-2 rounded-lg text-xs font-semibold uppercase tracking-wider transition-colors ${
-											isActive
+										className={`flex items-center gap-2 px-4 py-2 rounded-lg text-xs font-semibold uppercase tracking-wider transition-colors ${isActive
 												? 'bg-blue-50 text-blue-600'
 												: 'text-gray-500 hover:text-gray-700 hover:bg-gray-100'
-										}`}
+											}`}
 									>
 										<span className="text-sm">{item.icon}</span>
 										<span>{item.label}</span>
