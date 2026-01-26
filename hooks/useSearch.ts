@@ -1,7 +1,8 @@
 'use client'
 
 import { useState } from 'react'
-import { searchService, SearchResult } from '@/services/search.service'
+import { searchService } from '@/services/search.service'
+import { SearchResult } from '@/types'
 
 export function useSearch() {
 	const [results, setResults] = useState<SearchResult[]>([])

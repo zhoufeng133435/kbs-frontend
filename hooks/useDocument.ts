@@ -1,7 +1,8 @@
 'use client'
 
 import { useState, useEffect } from 'react'
-import { documentService, Document } from '@/services/document.service'
+import { documentService } from '@/services/document.service'
+import { Document } from '@/types'
 
 export function useDocument() {
 	const [documents, setDocuments] = useState<Document[]>([])
