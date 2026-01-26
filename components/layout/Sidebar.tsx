@@ -19,7 +19,7 @@ export default function Sidebar() {
 	]
 
 	return (
-		<aside className="w-64 bg-sidebar border-r border-custom-border min-h-full p-4">
+		<aside className="w-64 bg-sidebar border-r border-custom-border h-screen sticky top-0 p-4 overflow-y-auto">
 			<nav className="space-y-6">
 				{/* 主菜单 */}
 				<div className="space-y-2">

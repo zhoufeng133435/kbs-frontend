@@ -18,13 +18,18 @@ export default function RootLayout({
 		<html lang="zh-CN">
 			<body>
 				<div className="flex flex-col min-h-screen">
-					<Header />
+					{/* 上方主体区域 */}
 					<div className="flex flex-1">
+						{/* 左侧边栏 */}
 						<Sidebar />
-						<main className="flex-1 bg-white">
+						{/* 中间主内容区 */}
+						<main className="flex-1 bg-white overflow-auto">
 							{children}
 						</main>
+						{/* 右侧工具栏 */}
+						<Header />
 					</div>
+					{/* 底部 */}
 					<Footer />
 				</div>
 			</body>

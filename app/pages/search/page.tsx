@@ -46,7 +46,7 @@ export default function SearchPage() {
 	return (
 		<div className="flex h-screen bg-white">
 			{/* 左侧边栏 */}
-			<div className="w-64 bg-sidebar border-r border-custom-border flex flex-col">
+			<div className="w-64 border-r border-custom-border flex flex-col">
 				{/* 功能区 */}
 				<div className="p-4 border-b border-custom-border">
 					<button
