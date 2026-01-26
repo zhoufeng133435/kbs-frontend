@@ -7,7 +7,7 @@ export default function SearchResult({ results }: SearchResultProps) {
 			{results.map((item, index) => (
 				<div
 					key={index}
-					className="p-6 bg-white border border-gray-200 rounded-lg hover:shadow-md transition-shadow cursor-pointer"
+					className="p-6 bg-white border border-custom-border rounded-lg hover:shadow-md transition-shadow cursor-pointer"
 				>
 					<h3 className="text-lg font-semibold text-gray-900 mb-2">
 						{item.title || '无标题'}

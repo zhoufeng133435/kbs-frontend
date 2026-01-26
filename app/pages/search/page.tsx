@@ -46,12 +46,12 @@ export default function SearchPage() {
 	return (
 		<div className="flex h-screen bg-white">
 			{/* 左侧边栏 */}
-			<div className="w-64 bg-gray-50 border-r border-gray-200 flex flex-col">
+			<div className="w-64 bg-sidebar border-r border-custom-border flex flex-col">
 				{/* 功能区 */}
-				<div className="p-4 border-b border-gray-200">
+				<div className="p-4 border-b border-custom-border">
 					<button
 						onClick={handleNewSearch}
-						className="w-full flex items-center gap-2 px-4 py-3 bg-white hover:bg-gray-100 border border-gray-200 rounded-lg transition-colors text-gray-700"
+						className="w-full flex items-center gap-2 px-4 py-3 bg-white hover:bg-gray-100 border border-custom-border rounded-lg transition-colors text-gray-700"
 					>
 						<PlusOutlined />
 						<span>新建搜索</span>
@@ -114,7 +114,7 @@ export default function SearchPage() {
 			{/* 右侧主内容区 */}
 			<div className="flex-1 flex flex-col">
 				{/* 搜索区域 */}
-				<div className="flex-1 flex flex-col items-center p-8 pt-12">
+				<div className="flex-1 flex flex-col items-center">
 					{!currentQuery ? (
 						<div className="w-full max-w-3xl">
 							<div className="text-center mb-8">
@@ -124,7 +124,7 @@ export default function SearchPage() {
 							<SearchInput onSearch={handleSearch} />
 						</div>
 					) : (
-						<div className="w-full max-w-4xl h-full flex flex-col">
+						<div className="w-full max-w-4xl h-full flex flex-col pt-4">
 							{/* 搜索框 */}
 							<div className="mb-6">
 								<SearchInput onSearch={handleSearch} />

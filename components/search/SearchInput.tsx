@@ -28,7 +28,7 @@ export default function SearchInput({ onSearch, defaultValue = '' }: SearchInput
 					onChange={(e) => setQuery(e.target.value)}
 					onKeyPress={handleKeyPress}
 					placeholder="输入搜索关键词..."
-					className="w-full px-6 py-4 pr-12 text-lg border-2 border-gray-300 rounded-full focus:outline-none focus:border-blue-500 transition-colors shadow-sm"
+					className="w-full px-6 py-4 pr-12 text-lg border-2 border-custom-border rounded-full focus:outline-none focus:border-blue-500 transition-colors shadow-sm"
 				/>
 				<button
 					onClick={handleSearch}

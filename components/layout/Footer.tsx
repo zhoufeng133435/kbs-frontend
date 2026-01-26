@@ -1,6 +1,6 @@
 export default function Footer() {
 	return (
-		<footer className="bg-gray-50 border-t mt-auto">
+		<footer className="bg-sidebar border-t border-custom-border mt-auto">
 			<div className="container mx-auto px-4 py-6 text-center text-gray-600">
 				<p>&copy; 2024 Knowledge Base System. All rights reserved.</p>
 			</div>

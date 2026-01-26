@@ -95,9 +95,9 @@ export default function UploadPage() {
 	return (
 		<div className="flex h-screen bg-white">
 			{/* 左侧文件列表 */}
-			<div className="w-80 bg-gray-50 border-r border-gray-200 flex flex-col">
+			<div className="w-80 bg-sidebar border-r border-custom-border flex flex-col">
 				{/* 上传按钮 */}
-				<div className="p-4 border-b border-gray-200">
+				<div className="p-4 border-b border-custom-border">
 					<button
 						onClick={handleUploadClick}
 						disabled={uploading}
@@ -169,7 +169,7 @@ export default function UploadPage() {
 
 			{/* 右侧内容区 */}
 			<div className="flex-1 flex flex-col">
-				<div className="flex-1 flex items-center justify-center p-8">
+				<div className="flex-1 flex items-center justify-center">
 					{!selectedFile ? (
 						/* 上传区域 */
 						<div className="w-full max-w-2xl">
@@ -205,9 +205,9 @@ export default function UploadPage() {
 					) : (
 						/* 文件详情 */
 						<div className="w-full max-w-3xl">
-							<div className="bg-white border border-gray-200 rounded-lg shadow-sm">
+							<div className="bg-white border border-custom-border rounded-lg shadow-sm">
 								{/* 详情头部 */}
-								<div className="p-6 border-b border-gray-200">
+								<div className="p-6 border-b border-custom-border">
 									<div className="flex items-start gap-4">
 										<div className="p-3 bg-blue-50 rounded-lg">
 											<FileTextOutlined className="text-blue-500" style={{ fontSize: '32px' }} />
@@ -233,15 +233,15 @@ export default function UploadPage() {
 								<div className="p-6">
 									<h3 className="text-lg font-semibold text-gray-800 mb-4">文件信息</h3>
 									<div className="space-y-3">
-										<div className="flex items-center justify-between py-3 border-b border-gray-100">
+										<div className="flex items-center justify-between py-3 border-b border-custom-border">
 											<span className="text-sm text-gray-600">文件名称</span>
 											<span className="text-sm font-medium text-gray-800">{selectedFile.name}</span>
 										</div>
-										<div className="flex items-center justify-between py-3 border-b border-gray-100">
+										<div className="flex items-center justify-between py-3 border-b border-custom-border">
 											<span className="text-sm text-gray-600">文件大小</span>
 											<span className="text-sm font-medium text-gray-800">{formatFileSize(selectedFile.size)}</span>
 										</div>
-										<div className="flex items-center justify-between py-3 border-b border-gray-100">
+										<div className="flex items-center justify-between py-3 border-b border-custom-border">
 											<span className="text-sm text-gray-600">上传时间</span>
 											<span className="text-sm font-medium text-gray-800">{formatDate(selectedFile.createTime)}</span>
 										</div>
@@ -253,7 +253,7 @@ export default function UploadPage() {
 								</div>
 
 								{/* 操作按钮 */}
-								<div className="p-6 border-t border-gray-200 bg-gray-50">
+								<div className="p-6 border-t border-custom-border bg-sidebar">
 									<button
 										onClick={() => handleDelete(selectedFile.id)}
 										className="px-4 py-2 bg-red-500 hover:bg-red-600 text-white rounded-lg transition-colors inline-flex items-center gap-2"

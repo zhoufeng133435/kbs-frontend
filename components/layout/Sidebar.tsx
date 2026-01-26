@@ -19,7 +19,7 @@ export default function Sidebar() {
 	]
 
 	return (
-		<aside className="w-64 bg-white border-r min-h-full p-4">
+		<aside className="w-64 bg-sidebar border-r border-custom-border min-h-full p-4">
 			<nav className="space-y-6">
 				{/* 主菜单 */}
 				<div className="space-y-2">
@@ -62,7 +62,7 @@ export default function Sidebar() {
 										key={item.href}
 										href={item.href}
 										className={`flex items-center gap-2 px-4 py-2 rounded-lg text-xs font-semibold uppercase tracking-wider transition-colors ${isActive
-											? 'bg-blue-50 text-blue-600'
+											? 'bg-blue-50 text-blue-600 border border-custom-border'
 											: 'text-gray-500 hover:text-gray-700 hover:bg-gray-100'
 											}`}
 									>

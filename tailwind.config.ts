@@ -11,6 +11,8 @@ const config: Config = {
 			colors: {
 				background: 'var(--background)',
 				foreground: 'var(--foreground)',
+				sidebar: '#f9f9f9',
+				'custom-border': '#0d0d0d0d',
 			},
 		},
 	},

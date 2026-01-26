@@ -90,9 +90,9 @@ export default function DocumentPage() {
 	return (
 		<div className="h-screen bg-white flex flex-col">
 			{/* 顶部工具栏 */}
-			<div className="border-b border-gray-200 bg-gray-50">
-				<div className="px-8 py-6">
-					<h1 className="text-3xl font-bold text-gray-800 mb-4">文档管理</h1>
+			<div className="border-b border-custom-border bg-sidebar">
+				<div className="px-4 py-4">
+					<h1 className="text-2xl font-bold text-gray-800 mb-4">文档管理</h1>
 
 					<div className="flex items-center justify-between gap-4">
 						{/* 搜索框 */}
@@ -103,7 +103,7 @@ export default function DocumentPage() {
 								value={searchQuery}
 								onChange={(e) => setSearchQuery(e.target.value)}
 								placeholder="搜索文档名称..."
-								className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500 transition-colors"
+								className="w-full pl-10 pr-4 py-2 border border-custom-border rounded-lg focus:outline-none focus:border-blue-500 transition-colors"
 							/>
 						</div>
 
@@ -130,7 +130,7 @@ export default function DocumentPage() {
 
 			{/* 文档列表 */}
 			<div className="flex-1 overflow-y-auto">
-				<div className="px-8 py-6">
+				<div className="px-4 py-4">
 					{loading ? (
 						<div className="flex items-center justify-center py-12">
 							<div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-500"></div>
@@ -148,9 +148,9 @@ export default function DocumentPage() {
 							</p>
 						</div>
 					) : (
-						<div className="bg-white border border-gray-200 rounded-lg overflow-hidden">
+						<div className="bg-white border border-custom-border rounded-lg overflow-hidden">
 							{/* 表格头部 */}
-							<div className="bg-gray-50 border-b border-gray-200">
+							<div className="bg-sidebar border-b border-custom-border">
 								<div className="flex items-center px-6 py-3">
 									{/* 全选checkbox */}
 									<div className="w-12 flex items-center justify-center">
@@ -158,7 +158,7 @@ export default function DocumentPage() {
 											onClick={handleSelectAll}
 											className={`w-5 h-5 rounded border-2 flex items-center justify-center transition-colors ${selectedIds.length === filteredDocuments.length && filteredDocuments.length > 0
 												? 'bg-blue-500 border-blue-500'
-												: 'border-gray-300 hover:border-gray-400'
+												: 'border-custom-border hover:border-gray-400'
 												}`}
 										>
 											{selectedIds.length === filteredDocuments.length && filteredDocuments.length > 0 && (
@@ -193,7 +193,7 @@ export default function DocumentPage() {
 							</div>
 
 							{/* 文档列表项 */}
-							<div className="divide-y divide-gray-200">
+							<div className="divide-y divide-custom-border">
 								{filteredDocuments.map((doc) => (
 									<div
 										key={doc.id}
@@ -206,7 +206,7 @@ export default function DocumentPage() {
 												onClick={() => handleSelectOne(doc.id)}
 												className={`w-5 h-5 rounded border-2 flex items-center justify-center transition-colors ${selectedIds.includes(doc.id)
 													? 'bg-blue-500 border-blue-500'
-													: 'border-gray-300 hover:border-gray-400'
+													: 'border-custom-border hover:border-gray-400'
 													}`}
 											>
 												{selectedIds.includes(doc.id) && (
@@ -247,7 +247,7 @@ export default function DocumentPage() {
 
 			{/* 底部统计信息 */}
 			{!loading && !error && filteredDocuments.length > 0 && (
-				<div className="border-t border-gray-200 bg-gray-50 px-8 py-4">
+				<div className="border-t border-custom-border bg-sidebar px-8 py-4">
 					<div className="flex items-center justify-between text-sm text-gray-600">
 						<span>共 {filteredDocuments.length} 个文档</span>
 						<span>

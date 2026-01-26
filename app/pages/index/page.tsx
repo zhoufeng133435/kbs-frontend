@@ -25,7 +25,7 @@ export default function Home() {
 	}
 
 	const StatCard = ({ label, value, unit }: { label: string; value: string; unit: string }) => (
-		<div className="bg-white p-6 rounded-2xl border border-gray-100 shadow-sm hover:shadow-md transition-shadow">
+		<div className="bg-white p-6 rounded-2xl border border-custom-border shadow-sm hover:shadow-md transition-shadow">
 			<p className="text-gray-500 text-xs font-semibold uppercase tracking-wider mb-2">{label}</p>
 			<div className="flex items-baseline gap-1">
 				<span className="text-2xl font-bold text-gray-900">{value}</span>
@@ -42,15 +42,15 @@ export default function Home() {
 	)
 
 	return (
-		<main className="max-w-7xl mx-auto space-y-12">
+		<div className="w-full space-y-8">
 			{/* 顶部欢迎语 */}
-			<div className="mb-10">
-				<h1 className="text-2xl font-bold text-gray-900 mb-2">知识库概览</h1>
-				<p className="text-gray-500 text-sm">实时掌握系统核心资产与 AI 运行效率</p>
+			<div className="mb-6 p-4">
+				<h1 className="text-xl font-bold text-gray-900 mb-1">知识库概览</h1>
+				<p className="text-gray-500 text-xs">实时掌握系统核心资产与 AI 运行效率</p>
 			</div>
 
 			{/* 知识资产统计 */}
-			<section>
+			<section className="px-4">
 				<SectionTitle title="知识资产统计" />
 				<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
 					{stats.assets.map((s, i) => (
@@ -60,7 +60,7 @@ export default function Home() {
 			</section>
 
 			{/* 使用行为统计 */}
-			<section>
+			<section className="px-4">
 				<SectionTitle title="使用行为统计" />
 				<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
 					{stats.behavior.map((s, i) => (
@@ -70,7 +70,7 @@ export default function Home() {
 			</section>
 
 			{/* AI 特有统计 */}
-			<section>
+			<section className="px-4 pb-8">
 				<SectionTitle title="AI 特有统计" />
 				<div className="grid grid-cols-1 md:grid-cols-3 gap-6">
 					{stats.ai.map((s, i) => (
@@ -78,6 +78,6 @@ export default function Home() {
 					))}
 				</div>
 			</section>
-		</main>
+		</div>
 	)
 }
